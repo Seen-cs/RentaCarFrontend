@@ -1,0 +1,63 @@
+
+
+<div class="row">
+    <div class="col-md-3">
+    <app-brand></app-brand>
+    <app-color></app-color>
+</div>
+<div class="col-md-9">
+
+
+        <section class="ftco-section bg-light">
+            <div class="container pt-5">
+
+                <div class="mb-3">
+                    <label for="filterText" class="form-label">Araba ara</label>
+                    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="ara">
+                </div>
+
+                <div *ngIf="filterText" class="alert alert-warning">
+                    <strong>{{filterText}}</strong> aradınız.
+                </div>
+                <div class="row ">
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4" *ngFor="let car of cars | filterPipe:filterText">
+                                <div class="car-wrap rounded">
+                                    <a routerLink="/cars/detail/{{car.carId}}">
+                                        <div style="background-image:url(../../../assets/images/pngegg.png); width:auto;height:175px;" class="img rounded d-flex align-items-end"
+                                          >
+                                        </div>
+                                    </a>
+                                    <div class="text" >
+                                        <h2 class="mb-0"><a class="text-dark"
+                                                routerLink="/cars/detail/{{car.carId}}">{{car.brandName}} {{car.carName}}</a></h2>
+                                        <div class="d-flex mb-3 mt-3 justify-content-between">
+                                            <span class="cat w-50" style="color: rgb(119, 132, 144);">{{car.description}} {{car.colorName}}</span>
+                                            <p class="price">{{car.dailyPrice + " ₺"}} <span>/gün</span></p>
+                                        </div>
+                                        <div class="d-flex mb-0 w-100 justify-content-between">
+                                            <button (click)="addToCart(car)"  class="btn btn-warning w-50 py-2 me-6">Sepete Ekle</button>
+                                            <button routerLink="/cars/detail/{{car.carId}}"
+                                                class="btn w-50  btn-secondary py-2 ms-1">Detay</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+</div></div>
+

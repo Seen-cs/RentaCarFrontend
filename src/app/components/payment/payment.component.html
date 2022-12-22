@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">ödeme adresi</h3>
+
+                <div class="inputBox">
+                    <span>isim :</span>
+                    <input type="text" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>adres :</span>
+                    <input type="text" placeholder="cadde - mahalle - il/içe">
+                </div>
+                <div class="inputBox">
+                    <span>Şehir :</span>
+                    <input type="text" placeholder="Ankara">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="Türkiye">
+                    </div>
+                    <div class="inputBox">
+                        <span>posta kodu:</span>
+                        <input type="text" placeholder="12345">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">ödeme</h3>
+
+
+                <div class="inputBox">
+                    <span>kart üzerindeki isim :</span>
+                    <input type="text" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>kredi kart numarasi :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>son kullanma tarihi:</span>
+                    <input type="text" placeholder="ocak">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>son kullanma yılı :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <input type="button" (click)="completedPayment()" value="proceed to checkout" class="submit-btn">
+
+    </form>
+
+</div>
+
+</body>
+</html>
